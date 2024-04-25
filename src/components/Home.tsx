@@ -7,7 +7,7 @@ const Home: React.FC = () => {
         <img className="w-48 h-48 rounded-full object-cover mx-auto" src="Myprofile.jpg" alt="My Profile" />
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold text-gray-900">Adoo Darko Jonathan</h1>
-          <h2 className="text-xl font-medium text-gray-700">Software Engineer</h2>
+          <h2 className="text-xl font-medium text-gray-700">Software Engineer and Robotics Enthusiast</h2>
           <p className="text-gray-600 mt-4">
             I'm a passionate web developer with a knack for building user-friendly and interactive web experiences. Let's collaborate on your next project!
           </p>
