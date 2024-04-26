@@ -14,6 +14,18 @@ const projects: Project[] = [
     image: "path/to/project/image.jpg",
     link: "https://yourproject.com",
   },
+  {
+   title: "Project 2",
+   description: "A brief description of your project",
+   image: "path/to/project/image.jpg",
+   link: "https://yourproject.com",
+ },
+   {
+      title: "Project 3",
+      description: "A brief description of your project",
+      image: "path/to/project/image.jpg",
+      link: "https://yourproject.com",
+   },
 ];
 
 const Projects: React.FC = () => {

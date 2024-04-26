@@ -3,9 +3,9 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Home: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 mt-8">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-        <img className="w-48 h-48 rounded-full object-cover mx-auto" src="Myprofile.jpg" alt="My Profile" />
+        <img className="w-80 h-80 rounded-full object-cover mx-auto" src="Myprofile.jpg" alt="My Profile" />
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold text-gray-900">Adoo Darko Jonathan</h1>
           <h2 className="text-xl font-medium text-gray-700">Software Engineer and Robotics Enthusiast</h2>
