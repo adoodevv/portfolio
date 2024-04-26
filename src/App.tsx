@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
@@ -11,14 +11,11 @@ const App: React.FC = () => {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="*" element={<div>404: Not Found</div>} />
-        </Routes>
+        <div id="/"><Home /></div>
+        <div id="about"><About /></div>
+        <div id="projects"><Projects /></div>
+        <div id="achievements"><Achievements /></div>
+        <div id="contact"><Contact /></div>
       </Layout>
     </Router>
   );

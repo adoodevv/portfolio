@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 interface LayoutProps {
    children: React.ReactNode;
@@ -8,23 +8,28 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
    return (
       <div className="min-h-screen flex flex-col">
-         <nav className="bg-gray-800 text-white px-4 py-2 flex justify-between items-center">
-            <NavLink to="/" className="text-xl font-bold">adoodevv</NavLink>
-            <ul className="flex space-x-4">
+         <nav className="bg-gray-800 text-white px-8 py-4 flex justify-between items-center">
+            <ul className="text-sm flex space-x-4">
                <li>
-                  <NavLink to="/" className="hover:text-gray-400">Home</NavLink>
+                  <Link smooth to="/" className="hover:text-gray-400">Home</Link>
                </li>
                <li>
-                  <NavLink to="/about" className="hover:text-gray-400">About</NavLink>
+                  <Link smooth to="/#about" className="hover:text-gray-400">About</Link>
                </li>
                <li>
-                  <NavLink to="/projects" className="hover:text-gray-400">Projects</NavLink>
+                  <Link smooth to="/#projects" className="hover:text-gray-400">Projects</Link>
+               </li>
+            </ul>
+            <Link to="/" className="text-xl font-bold">adoodevv</Link>
+            <ul className="text-sm flex space-x-4">
+               <li>
+                  <Link smooth to="/#contact" className="hover:text-gray-400">Contact</Link>
                </li>
                <li>
-                  <NavLink to="/contact" className="hover:text-gray-400">Contact</NavLink>
+                  <Link smooth to="/#achievements" className="hover:text-gray-400">Achievements</Link>
                </li>
                <li>
-                  <NavLink to="/achievements" className="hover:text-gray-400">Achievements</NavLink>
+                  CV
                </li>
             </ul>
          </nav>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Home: React.FC = () => {
   return (
@@ -11,7 +12,11 @@ const Home: React.FC = () => {
           <p className="text-gray-600 mt-4">
             I'm a passionate web developer with a knack for building user-friendly and interactive web experiences. Let's collaborate on your next project!
           </p>
-          <button className="btn btn-primary mt-4">Contact Me</button>
+          <Link smooth to="/#contact" className="text-blue-500 mt-4">
+            <button className="text-gray-700 px-3 py-1 rounded-md bg-gray-200 mt-4">
+              Contact Me
+            </button>
+          </Link>
         </div>
       </div>
 
