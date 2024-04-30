@@ -10,19 +10,19 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Project 1",
-    description: "A brief description of your project",
-    image: "path/to/project/image.jpg",
+    description: "A brief description of the project",
+    image: "src/assets/exxmon1.png",
     link: "https://yourproject.com",
   },
   {
    title: "Project 2",
-   description: "A brief description of your project",
+   description: "A brief description of the project",
    image: "path/to/project/image.jpg",
    link: "https://yourproject.com",
  },
    {
       title: "Project 3",
-      description: "A brief description of your project",
+      description: "A brief description of the project",
       image: "path/to/project/image.jpg",
       link: "https://yourproject.com",
    },
@@ -31,7 +31,7 @@ const projects: Project[] = [
 const Projects: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-medium text-gray-900 mb-4">Projects</h2>
+      <h2 className="text-2xl font-medium text-white mb-4">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
