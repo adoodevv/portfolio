@@ -9,15 +9,17 @@ import Achievements from './components/Achievements';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Layout>
-        <div id="/"><Home /></div>
-        <div id="about"><About /></div>
-        <div id="projects"><Projects /></div>
-        <div id="achievements"><Achievements /></div>
-        <div id="contact"><Contact /></div>
-      </Layout>
-    </Router>
+    <div className="w-full min-h-screen bg-black m-0 p-0">
+      <Router>
+        <Layout>
+          <div id="/"><Home /></div>
+          <div id="about"><About /></div>
+          <div id="projects"><Projects /></div>
+          <div id="achievements"><Achievements /></div>
+          <div id="contact"><Contact /></div>
+        </Layout>
+      </Router>
+    </div>
   );
 };
 
