@@ -1,35 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 interface LayoutProps {
    children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+   const [isScrolled, setIsScrolled] = useState(false);
+
+   useEffect(() => {
+      const checkScroll = () => {
+         setIsScrolled(window.scrollY > 0);
+      };
+
+      window.addEventListener('scroll', checkScroll);
+
+      return () => {
+         window.removeEventListener('scroll', checkScroll);
+      };
+   }, []);
+
    return (
       <div className="min-h-screen flex flex-col">
-         <nav className="bg-gray-800 text-white px-8 py-4 flex justify-between items-center fixed w-full top-0">
+         <nav className={`px-8 py-4 flex justify-between items-center fixed w-full top-0 ${isScrolled ? 'bg-white bg-opacity-60 text-black' : 'bg-tranparent text-white'}`}>
             <ul className="text-sm flex space-x-4">
-               <li>
-                  <Link smooth to="/#" className="hover:text-gray-400">Home</Link>
-               </li>
-               <li>
-                  <Link smooth to="/#about" className="hover:text-gray-400">About</Link>
-               </li>
-               <li>
-                  <Link smooth to="/#projects" className="hover:text-gray-400">Projects</Link>
-               </li>
+               <button className="px-3 py-1 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
+                  <li>
+                     <Link smooth to="/#">Home</Link>
+                  </li>
+               </button>
+               <button className="px-3 py-1 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
+                  <li>
+                     <Link smooth to="/#about">About</Link>
+                  </li>
+               </button>
+               <button className="px-3 py-1 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
+                  <li>
+                     <Link smooth to="/#projects">Projects</Link>
+                  </li>
+               </button>
             </ul>
             <Link to="/#" className="text-xl font-bold">adoodevv</Link>
             <ul className="text-sm flex space-x-4">
                <li>
-                  <Link smooth to="/#contact" className="hover:text-gray-400">Contact</Link>
+                  <button className={`px-3 py-1 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'}`}>
+                     <Link smooth to="/#contact">Contact</Link>
+                  </button>
                </li>
                <li>
-                  <Link smooth to="/#achievements" className="hover:text-gray-400">Achievements</Link>
+                  <button className={`px-3 py-1 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'}`}>
+                     <Link smooth to="/#achievements">Achievements</Link>
+                  </button>
                </li>
                <li>
-                  CV
+                  <button className="text-sky-700 px-3 py-1 rounded-full border border-white bg-white hover:scale-110">
+                     <a href="/path/to/my/cv.pdf" download className="flex items-center space-x-1">
+                        <FontAwesomeIcon icon={faDownload} />
+                        <span>CV</span>
+                     </a>
+                  </button>
                </li>
             </ul>
          </nav>
