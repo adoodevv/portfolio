@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faInstagram, faTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faXTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
             <h1 className="text-6xl font-bold text-white">
               <span className="text-sky-700">Adoo</span> Darko Jonathan
             </h1>
-            <h2 className="text-xl font-medium text-gray-400 mt-4">Software Engineer and Roboticist</h2>
+            <h2 className="text-xl font-medium text-white mt-4">Software Engineer and Roboticist</h2>
             <p className="text-white mt-4 text-sm w-3/4">
               I have a knack for building user-friendly and interactive web experiences as well as designing, programming, constructing, and testing of robots. Let's collaborate on your next project!
             </p>
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="social-links absolute bottom-8 right-8 flex justify-center space-x-4">
+        <div className="social-links absolute bottom-8 right-8 flex justify-center space-x-8">
           <a href="https://github.com/adoodevv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
           <a href="https://twitter.com/adoodevv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faTwitter} size="2x" />
+            <FontAwesomeIcon icon={faXTwitter} size="2x" />
           </a>
           <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
