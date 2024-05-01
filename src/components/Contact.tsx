@@ -5,7 +5,10 @@ import { faGithub, faInstagram, faTwitter, faLinkedin, faHashnode } from '@forta
 const Contact: React.FC = () => {
    return (
       <div className="container mx-auto px-4 py-8">
-         <h2 className="text-2xl font-medium text-gray-900 mb-4">Contact Me</h2>
+         <div className="flex items-center space-x-4 relative">
+            <div className="absolute left-0 top-0 bottom-0 w-1 h-8 bg-sky-700"></div>
+            <h2 className="text-2xl font-medium text-white mb-4">Contact Me</h2>
+         </div>
          <form className="w-full max-w-lg mx-auto mt-10">
             <div className="flex flex-wrap -mx-3 mb-6">
                <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -33,7 +36,7 @@ const Contact: React.FC = () => {
                </div>
             </div>
          </form>
-         <div className="social-links mt-4 flex justify-center space-x-4">
+         <div className="social-links mt-4 flex justify-center space-x-8 text-white">
             <a href="https://github.com/adoodevv" target="_blank" rel="noopener noreferrer">
                <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
