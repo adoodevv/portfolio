@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
    return (
       <div className="min-h-screen flex flex-col">
-         <nav className={`px-8 py-4 flex justify-between items-center fixed w-full top-0 ${isScrolled ? 'bg-white bg-opacity-60 text-black' : 'bg-tranparent text-white'}`}>
+         <nav className={`z-50 px-8 py-4 flex justify-between items-center fixed w-full top-0 ${isScrolled ? 'bg-white bg-opacity-50 backdrop-blur-sm text-black' : 'bg-tranparent text-white'}`}>
             <ul className="text-sm flex space-x-4">
                <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
                   <li>
