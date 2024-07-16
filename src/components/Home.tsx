@@ -1,45 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { HashLink as Link } from 'react-router-hash-link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faInstagram, faXTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
+import '../styles/Home.css';
 
 const Home: React.FC = () => {
+  const [text1, setText1] = useState('Adoo Darko');
+  const [text2, setText2] = useState('Jonathan');
+  const [animationClass1, setAnimationClass1] = useState('');
+  const [animationClass2, setAnimationClass2] = useState('');
+
+  const texts1 = ['Adoo Darko', 'Build & Code', 'Create Elegant'];
+  const texts2 = ['Jonathan', 'Robots', 'Web Pages'];
+
+  useEffect(() => {
+    let index1 = 0;
+    let index2 = 0;
+
+    const interval = setInterval(() => {
+      index1 = (index1 + 1) % texts1.length;
+      index2 = (index2 + 1) % texts2.length;
+
+      setAnimationClass1('scroll-out');
+      setAnimationClass2('scroll-out');
+
+      setTimeout(() => {
+        setText1(texts1[index1]);
+        setText2(texts2[index2]);
+        setAnimationClass1('scroll-in');
+        setAnimationClass2('scroll-in');
+      }, 500); // Duration of the scroll-out animation
+    }, 5000); // Interval time
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center gap-8">
-          <img className="w-96 h-96 rounded-full object-cover mx-auto" src="src/assets/profile.jpg" alt="My Profile" />
-          <div className="text-center md:text-left">
-            <h1 className="text-6xl font-bold text-white">
-              <span className="text-sky-700">Adoo</span> Darko Jonathan
-            </h1>
-            <h2 className="text-xl font-medium text-white mt-4">Software Engineer and Roboticist</h2>
-            <p className="text-white mt-4 text-sm w-3/4">
-              I have a knack for building user-friendly and interactive web experiences as well as designing, programming, constructing, and testing of robots. Let's collaborate on your next project!
-            </p>
-            <Link smooth to="/#contact" className="mt-4">
-              <button className="text-sky-700 px-3 py-1 rounded-md border border-sky-700 bg-transparent mt-4 hover:text-white hover:bg-sky-700">
-                Contact Me
-              </button>
-            </Link>
+    <div className="h-screen">
+      <h1 className={`text-9xl font-light absolute bottom-60 left-8 text-white ${animationClass1}`}>
+        <span className="text-sky-700">{text1}</span>
+      </h1>
+      <h1 className={`text-9xl font-light text-white absolute bottom-8 right-8 ${animationClass2}`}>
+        <span className="text-white">{text2}</span>
+      </h1>
+      <Link smooth to="/#about">
+        <i className="bi bi-arrow-down absolute bottom-0 left-8 text-white text-7xl animate-bounce"></i>
+      </Link>
+      <div className="absolute bottom-56 right-8 flex items-center bg-white p-2 rounded-3xl bg-opacity-10 backdrop-blur-sm">
+        <img className="w-16 h-16 rounded-full object-cover mx-auto" src="src/assets/twitter.jpg" alt="Tweet" />
+        <div className="flex-column mx-4">
+          <div className="flex gap-1">
+            <h2>
+              <span className="text-white font-bold">jonathan</span>
+              <i className="bi bi-patch-check-fill text-sky-700 ml-1"></i>
+            </h2>
+            <p className="text-gray-500 font-light">@adoodevv · Apr 5</p>
           </div>
-        </div>
-        <div className="social-links absolute bottom-8 right-8 flex justify-center space-x-8">
-          <a href="https://github.com/adoodevv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </a>
-          <a href="https://instagram.com/adoodevv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </a>
-          <a href="https://twitter.com/adoodevv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faXTwitter} size="2x" />
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          </a>
-          <a href="https://hashnode.com/@adoojoey" target="_blank" rel="noopener noreferrer" className="text-white hover:text-sky-700">
-            <FontAwesomeIcon icon={faHashnode} size="2x" />
-          </a>
+          <p className="text-white font-normal">Soon 🤞🏼</p>
         </div>
       </div>
     </div>
