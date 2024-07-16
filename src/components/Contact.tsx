@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faInstagram, faTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faXTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
 
 const Contact: React.FC = () => {
    return (
@@ -37,19 +37,19 @@ const Contact: React.FC = () => {
             </div>
          </form>
          <div className="social-links mt-4 flex justify-center space-x-8 text-white">
-            <a href="https://github.com/adoodevv" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/adoodevv" target="_blank" rel="noopener noreferrer" className="hover:text-sky-700 transition-colors duration-300">
                <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
-            <a href="https://instagram.com/adoodevv" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/adoodevv" target="_blank" rel="noopener noreferrer" className="hover:text-sky-700 transition-colors duration-300">
                <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
-            <a href="https://twitter.com/adoodevv" target="_blank" rel="noopener noreferrer">
-               <FontAwesomeIcon icon={faTwitter} size="2x" />
+            <a href="https://twitter.com/adoodevv" target="_blank" rel="noopener noreferrer" className="hover:text-sky-700 transition-colors duration-300">
+               <FontAwesomeIcon icon={faXTwitter} size="2x" />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-sky-700 transition-colors duration-300">
                <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
-            <a href="https://hashnode.com/@adoojoey" target="_blank" rel="noopener noreferrer">
+            <a href="https://hashnode.com/@adoojoey" target="_blank" rel="noopener noreferrer" className="hover:text-sky-700 transition-colors duration-300">
                <FontAwesomeIcon icon={faHashnode} size="2x" />
             </a>
          </div>
