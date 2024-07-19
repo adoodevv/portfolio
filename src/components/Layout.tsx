@@ -26,45 +26,55 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="min-h-screen flex flex-col">
          <nav className={`z-50 px-8 py-4 flex justify-between items-center fixed w-full top-0 ${isScrolled ? 'bg-white bg-opacity-50 backdrop-blur-sm text-black' : 'bg-tranparent text-white'}`}>
             <ul className="text-sm flex space-x-4">
-               <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
-                  <li>
-                     <Link smooth to="/#">Home</Link>
-                  </li>
-               </button>
-               <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
-                  <li>
-                     <Link smooth to="/#about">About</Link>
-                  </li>
-               </button>
-               <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white">
-                  <li>
-                     <Link smooth to="/#projects">Projects</Link>
-                  </li>
-               </button>
+               <Link smooth to="/#">
+                  <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white transition-colors duration-300">
+                     <li>
+                        Home
+                     </li>
+                  </button>
+               </Link>
+               <Link smooth to="/#about">
+                  <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white transition-colors duration-300">
+                     <li>
+                        About
+                     </li>
+                  </button>
+               </Link>
+               <Link smooth to="/#projects">
+                  <button className="px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 hover:text-white transition-colors duration-300">
+                     <li>
+                        Projects
+                     </li>
+                  </button>
+               </Link>
             </ul>
             <Link to="/#" className="text-xl font-bold">adoodevv</Link>
             <ul className="text-sm flex space-x-4">
+               <Link smooth to="/#contact">
+                  <li>
+                     <button className={`px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'} transition-colors duration-300`}>
+                        Contact
+                     </button>
+                  </li>
+               </Link>
+               <Link smooth to="/#achievements">
+                  <li>
+                     <button className={`px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'} transition-colors duration-300`}>
+                        Achievements
+                     </button>
+                  </li>
+               </Link>
                <li>
-                  <button className={`px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'}`}>
-                     <Link smooth to="/#contact">Contact</Link>
-                  </button>
-               </li>
-               <li>
-                  <button className={`px-4 py-2 rounded-full bg-transparent hover:border-sky-700 hover:bg-sky-700 ${isScrolled ? 'border border-black hover:text-white' : 'border border-white'}`}>
-                     <Link smooth to="/#achievements">Achievements</Link>
-                  </button>
-               </li>
-               <li>
-                  <button className="text-sky-700 px-4 py-2 rounded-full border border-white bg-white hover:scale-110">
-                     <a href="/path/to/my/cv.pdf" download className="flex items-center space-x-1">
+                  <button className="text-sky-700 px-4 py-2 rounded-full border border-white bg-white hover:scale-105 transition-transform duration-300">
+                     <a href="src/assets/Resume.pdf" download className="flex items-center">
                         <FontAwesomeIcon icon={faDownload} />
-                        <span>CV</span>
+                        <span className="ml-1">Resume</span>
                      </a>
                   </button>
                </li>
             </ul>
          </nav>
-         <main className="flex-grow px-4 py-8">{children}</main>
+         <main className="flex-grow">{children}</main>
       </div>
    );
 };
