@@ -1,22 +1,36 @@
 const Achievements: React.FC = () => {
    return (
-      <div className="container mx-auto px-4 py-8">
-         <div className="flex items-center space-x-4 relative">
-            <div className="absolute left-0 top-0 bottom-0 w-1 h-8 bg-sky-700"></div>
-            <h2 className="text-2xl font-medium text-white mb-4">Achievements</h2>
-         </div>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white shadow rounded-3xl p-4">
-               <h3 className="text-xl font-medium text-gray-900 mb-2">Achievement 1</h3>
-               <p className="text-gray-700">A brief description of the achievement</p>
+      <div>
+         <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col items-center justify-center mb-16">
+               <h1 className="text-8xl font-light text-white mb-4">Achievements</h1>
+               <p className="w-1/3 text-center text-gray-400">Here are a number of competitions I have participated on the World level and in </p>
             </div>
-            <div className="bg-white shadow rounded-3xl p-4">
-               <h3 className="text-xl font-medium text-gray-900 mb-2">Achievement 2</h3>
-               <p className="text-gray-700">A brief description of the achievement</p>
-            </div>
-            <div className="bg-white shadow rounded-3xl p-4">
-               <h3 className="text-xl font-medium text-gray-900 mb-2">Achievement 3</h3>
-               <p className="text-gray-700">A brief description of the achievement</p>
+            <div className="grid grid-cols-4 gap-4">
+               <div className="bg-white  h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">1st Place - Robofest UMC</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
+               <div className="bg-white  h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">2nd and 3rd Place - Shell Xprize</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
+               <div className="bg-white  h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">Semi-finalist - A2SV Hackathon</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
+               <div className="bg-white h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">Participant - World Skills Competition</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
+               <div className="bg-white  h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">Participant - World Robot Olympiad</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
+               <div className="bg-white  h-56 p-4 bg-opacity-20 rounded-2xl flex flex-col justify-end">
+                  <h3 className="text-base font-medium text-white mb-2">1st Place - RiSE</h3>
+                  <p className="text-gray-400 text-sm">A brief description of the achievement</p>
+               </div>
             </div>
          </div>
       </div>

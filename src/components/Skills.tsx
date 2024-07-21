@@ -1,6 +1,6 @@
 const Skills: React.FC = () => {
    return (
-      <div className="relative py-16 bg-sky-700 bg-opacity-10">
+      <div className="relative py-16 bg-sky-700 bg-opacity-20">
          <ul className="flex items-center justify-between flex-row px-16">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="w-16 h-16 hover:animate-spin-slow" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" className="w-16 h-16 hover:animate-wiggle" />

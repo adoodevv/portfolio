@@ -1,0 +1,31 @@
+@keyframes scroll-out {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+
+   100% {
+      transform: translateY(50%);
+      opacity: 0;
+   }
+}
+
+@keyframes scroll-in {
+   0% {
+      transform: translateY(-50%);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.scroll-out {
+   animation: scroll-out 1s forwards;
+}
+
+.scroll-in {
+   animation: scroll-in 1s forwards;
+}

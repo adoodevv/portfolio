@@ -35,7 +35,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen relative bg-[url('src/assets/tarmo5-2.jpg')]">
       <h1 className={`text-9xl font-light absolute bottom-60 left-8 text-white ${animationClass1}`}>
         <span className="text-sky-700">{text1}</span>
       </h1>
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <span className="text-white">{text2}</span>
       </h1>
       <Link smooth to="/#about">
-        <i className="bi bi-arrow-down absolute bottom-0 left-8 text-white text-7xl animate-bounce"></i>
+        <i className="bi bi-arrow-down absolute bottom-8 left-8 text-white text-7xl animate-bounce"></i>
       </Link>
       <div className="absolute bottom-56 right-8 flex items-center bg-white p-2 rounded-3xl bg-opacity-10 backdrop-blur-sm">
         <img className="w-16 h-16 rounded-full object-cover mx-auto" src="src/assets/twitter.jpg" alt="Tweet" />

@@ -1,0 +1,25 @@
+@keyframes roll {
+   0% {
+      transform: translateX(185%);
+   }
+
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+.gallery-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: nowrap;
+   height: 100%;
+   animation: roll 30s linear infinite;
+}
+
+.gallery-img {
+   margin: 10px;
+   width: auto;
+   height: auto;
+   max-height: 100%;
+}

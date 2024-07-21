@@ -10,7 +10,7 @@ interface Project {
 
 const ProjectCard: React.FC<Project> = ({ title, description, image, link }) => {
   return (
-    <div className="relative bg-white rounded-3xl shadow-md overflow-hidden h-80">
+    <div className="relative bg-white rounded-3xl shadow-md overflow-hidden">
       <img className="h-full w-full object-cover hover:scale-110 transition-transform duration-300" src={image} alt={title} />
       <div className="absolute bottom-0 bg-black bg-opacity-85 text-white p-4 w-full">
         <h3 className="text-lg font-medium">{title}</h3>

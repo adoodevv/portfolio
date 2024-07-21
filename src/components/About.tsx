@@ -27,13 +27,13 @@ const About: React.FC = () => {
   }, [items.length]);
 
   return (
-    <div className="relative bg-sky-700">
+    <div className="relative bg-gradient-to-r from-sky-500 to-indigo-500">
       <div className="container px-44 py-24">
         <div className="">
           <h1 className="text-9xl font-light text-black mb-8">About</h1>
           <h2 className="text-9xl font-light text-black mb-8">me</h2>
         </div>
-        <p className="absolute right-56 bottom-56 text-black text-base w-1/4">
+        <p className="absolute right-80 bottom-52 text-black text-sm w-1/3">
           A passionate and skilled software engineer and roboticist with experience in building
           modern and responsive web applications as well as designing, programming, constructing,
           and testing of robots
