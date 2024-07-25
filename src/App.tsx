@@ -6,7 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
-// import Contact from './components/Contact';
+import Contact from './components/Contact';
 // import Gallery from './components/Gallery';
 
 const App: React.FC = () => {
@@ -19,6 +19,7 @@ const App: React.FC = () => {
           <div id="projects"><Skills /></div>
           <div id="projects"><Projects /></div>
           <div id='achievements'><Achievements /></div>
+          <div id='contact'><Contact /></div>
         </Layout>
       </Router>
     </div>
